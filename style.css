@@ -1,0 +1,265 @@
+
+:root {
+    --color-principal: #1F2937;
+    --color-secundario: #4B5563;
+    --color-acento: #F97316;   
+    --color-texto: #000000;
+    --color-fondo: #FFFFFF;
+    --color-terciario: #0F172A;
+    --color-resalto: #EF4444;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 5px #000c;
+}
+
+.nav__container {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    height: 100%;
+}
+
+.ul__container {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.link a {
+    text-decoration: none;
+    color: var(--color-terciario);
+    padding: 10px 0;
+    margin: 0 10px;
+    font-weight: 600;
+    position: relative;
+}
+
+.link a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 10px;
+    left: 0;
+    background-color: var(--color-acento);
+    transition: width 0.3s ease;
+}
+
+.link a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    display: flex;
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+    background-image: 
+    url("imagenes/Gemini_Generated_Image_a4xaea4xaea4xaea.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-principal);
+    background-color: #fff9;
+    padding: 40px;
+    border-radius: 7px;
+    box-shadow: 0 10px 30px #0009;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    margin-left: 30px;
+    align-items: center;
+}
+
+h1,.hero__subtitulo,.btn__container {
+    padding: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--color-principal);
+}
+
+.hero__subtitulo {
+    color: var(--color-resalto);
+    margin: 0;
+    font-size: 1.3em;
+    position: relative;
+    top: -20px;
+}
+
+.hero__p {
+    color: var(--color-secundario);
+    text-align: justify;
+    margin: 0;
+}
+
+.btn__container {
+    display: flex;
+    gap: 30px;
+}
+
+#btn__baterias, #btn__ubi {
+    padding: 10px 25px;
+    margin: 0;
+}
+
+#btn__baterias {
+    border-radius: 6px;
+    border: 1.5px solid #EF4444;
+    background-color: #EF4444;
+    color: #fff;
+}
+
+#btn__ubi {
+    border-radius: 6px;
+    border: 1.5px solid var(--color-secundario);
+    background-color: transparent;
+    color: var(--color-secundario);
+}
+
+#btn__ubi:hover {
+    cursor: pointer;
+    border: 1.5px solid var(--color-resalto);
+    color: var(--color-resalto);
+    transition: all .1s ease-in;
+}
+
+#btn__baterias:hover {
+    cursor: pointer;
+    background-color: #cd3322;
+    transition: all .1s ease-in;
+    border-color: #cd3322;
+}
+
+.categorias__container {
+    padding: 60px 20px;
+    background-color: #f5f6f8;
+}
+
+.cat__label {
+    font-weight: 500;
+    color: var(--color-acento);
+    font-style: oblique;
+}
+
+.cat__title {
+    text-align: start;
+    color: var(--color-principal);
+    font-size: 2rem;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+.grid__categorias {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cat__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 150px; 
+    background-color: #f8fafc; 
+    border: 1px solid var(--color-secundario);
+    border-radius: 8px;
+    text-decoration: none; 
+    transition: all 0.3s ease;
+}
+
+.cat__item h3 {
+    color: var(--color-terciario);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cat__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px #0002; 
+    border-color: var(--color-resalto);
+}
+
+.about__section {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+} 
+
+.about__main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1.5px solid var(--color-principal);
+}
+
+.map__content {
+    border-radius: 8px;
+    box-shadow: 0 0 20px 1px #0009;
+}
+
+.about__section h2 {
+    font-family: "Archivo", sans-serif;
+    color: var(--color-acento);
+}
+.about__section p {
+    color: var(--color-terciario);
+    font-weight: 500;
+    text-align: justify;
+    padding-right: 20px;
+}
+
+.about__map {
+    display: flex;
+    flex-direction: column;;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-right: -30px;
+}
+
+.about__map iframe {
+    width: 100%;            /* Ocupa todo el ancho disponible... */
+    max-width: 300px;       /* ...pero como máximo se clava en 450px (acá manejás el tamaño) */
+    aspect-ratio: 3 / 2;    /* Fuerza a que el mapa sea siempre un cuadrado perfecto (Relación 1:1) */
+    height: auto;           /* Permite que la altura se adapte a la proporción del ancho */
+    border-radius: 12px;    /* Opcional: le da unas esquinas redondeadas estéticas que quedan muy bien con las fotos */
+}
+
