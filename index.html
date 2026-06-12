@@ -14,12 +14,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
- 
+
     <header>
         <nav class="nav__container">
             <a href="#"><img src="imagenes/battery_change_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Logo de Enermax"
                     class="logo"></a>
-            <ul class="ul__container">
+
+            <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false"
+                aria-controls="navMenu">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+
+            <ul class="ul__container" id="navMenu">
                 <li class="link"><a href="#home">Inicio</a></li>
                 <li class="link"><a href="#categorias">Productos</a></li>
                 <li class="link"><a href="#about">Nosotros</a></li>
@@ -35,8 +43,8 @@
                 <p class="hero__p">Baterías para automotores, línea pesada, motos, náutica, tracción y solar.
                     Asesoramiento técnico para particulares, talleres y flotas.</p>
                 <div class="btn__container">
-                    <button id="btn__baterias">Baterías</button>
-                    <button id="btn__ubi">Ubicación</button>
+                    <button type="button" id="btn__baterias">Baterías</button>
+                    <button type="button" id="btn__ubi">Ubicación</button>
                 </div>
             </div>
         </section>
@@ -54,7 +62,7 @@
                     <h3>Motocicletas</h3>
                 </a>
                 <a href="#" class="cat__item">
-                   <h3>Náutica</h3>
+                    <h3>Náutica</h3>
                 </a>
                 <a href="#" class="cat__item">
                     <h3>Tracción</h3>
@@ -73,8 +81,8 @@
                         ayudándote a elegir la batería correcta para cada equipo y a mantenerla en óptimas
                         condiciones por más tiempo.</p>
                 </div>
-                <div class="about__map">
-                    <iframe
+                <div class="about__map" id="map">
+                    <iframe title="Ubicación de Enermax en el mapa"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6736.130847587252!2d-63.22825692455571!3d-32.417405573816005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cc433421d55905%3A0x3ea2e8fc33ce48e!2sBaterias%20PLACORD%20ENERMAX!5e0!3m2!1ses-419!2sar!4v1781281917189!5m2!1ses-419!2sar"
                         style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade" class="map__content"></iframe>
@@ -86,12 +94,12 @@
             <address class="contact__info">
                 <p>Dirección: [tu dirección], Villa María, Córdoba</p>
                 <p>Teléfono: <a href="tel:+5493534066268">+54 9 353 406-6268</a></p>
-                <p>Email: <a href="mailto:matiaseravalle@gmail.com">info@enermax.com</a></p>
+                <p>Email: <a href="mailto:matiaseravalle@gmail.com">matiaseravalle@gmail.com</a></p>
             </address>
         </section>
     </main>
- 
+
     <script src="script.js"></script>
 </body>
- 
+
 </html>

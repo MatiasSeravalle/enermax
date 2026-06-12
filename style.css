@@ -45,10 +45,46 @@ header {
     display: block;
 }
 
+.nav__toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav__toggle-bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-terciario);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav__toggle.active .nav__toggle-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav__toggle.active .nav__toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav__toggle.active .nav__toggle-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 .ul__container {
     display: flex;
     flex-direction: row;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .link a {
@@ -116,8 +152,7 @@ h1 {
     color: var(--color-resalto);
     margin: 0;
     font-size: 1.3em;
-    position: relative;
-    top: -20px;
+    margin-top: -10px;
 }
 
 .hero__p {
@@ -209,13 +244,6 @@ h1 {
     transition: all 0.3s ease;
 }
 
-.cat__item .icon {
-    width: 36px;
-    height: 36px;
-    color: var(--color-acento);
-    transition: color 0.3s ease;
-}
-
 .cat__item h3 {
     color: var(--color-terciario);
     font-size: 1.3rem;
@@ -227,10 +255,6 @@ h1 {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px #0002;
     border-color: var(--color-resalto);
-}
-
-.cat__item:hover .icon {
-    color: var(--color-resalto);
 }
 
 .about__section {
@@ -322,3 +346,146 @@ h1 {
     color: var(--color-acento);
 }
 
+/* ============================
+   RESPONSIVE - Tablets y móviles
+   ============================ */
+@media (max-width: 768px) {
+
+    /* Nav hamburguesa */
+    .nav__toggle {
+        display: flex;
+    }
+
+    .ul__container {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        background-color: #fff;
+        box-shadow: 0 4px 10px #0002;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+    }
+
+    .ul__container.active {
+        max-height: 300px;
+    }
+
+    .link {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .link a {
+        display: block;
+        padding: 15px 0;
+        margin: 0;
+    }
+
+    /* Hero (sin imagen de fondo en mobile) */
+    .hero {
+        height: auto;
+        min-height: auto;
+        margin-top: 70px;
+        background-image: none;
+        background-color: var(--color-terciario);
+        padding: 50px 20px;
+    }
+
+    .hero__content {
+        margin-left: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.2em;
+        padding: 0;
+    }
+
+    .hero__subtitulo {
+        position: static;
+        font-size: 1.1em;
+        margin-top: 8px;
+    }
+
+    .hero__p {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .btn__container {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    #btn__baterias,
+    #btn__ubi {
+        width: 100%;
+    }
+
+    /* Categorías */
+    .categorias__container {
+        padding: 40px 15px;
+    }
+
+    .grid__categorias {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    /* Sobre nosotros */
+    .about__section {
+        padding: 20px;
+    }
+
+    .about__main-content {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .about__map {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .about__map iframe {
+        max-width: 100%;
+    }
+
+    /* Contacto */
+    .contact__section {
+        padding: 40px 15px;
+    }
+}
+
+/* ============================
+   Celulares chicos
+   ============================ */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    .hero__subtitulo {
+        font-size: 1.1em;
+    }
+
+    .grid__categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .cat__title {
+        font-size: 1.5rem;
+    }
+}
