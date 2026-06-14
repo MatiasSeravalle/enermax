@@ -20,7 +20,7 @@ html {
 
 body {
     margin: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -299,7 +299,7 @@ h1 {
 }
 
 .about__section h2 {
-    font-family: "Archivo", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     color: var(--color-acento);
 }
 
@@ -347,7 +347,7 @@ h1 {
 
 .footer__heading {
     color: var(--color-acento);
-    font-family: "Archivo", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;

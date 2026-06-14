@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo completo de baterías Enermax: automotores, línea pesada, motos, náutica, tracción y solar. Villa María, Córdoba.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="productos.css">
+    <title>Catálogo – Enermax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="nav__container">
+            <a href="index.html"><img src="imagenes/battery_change_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Logo de Enermax" class="logo"></a>
+
+            <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+
+            <ul class="ul__container" id="navMenu">
+                <li class="link"><a href="index.html">Inicio</a></li>
+                <li class="link"><a href="#catalogo">Productos</a></li>
+                <li class="link"><a href="index.html#about">Nosotros</a></li>
+                <li class="link"><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cat__banner">
+            <div class="cat__banner-content">
+                <span class="cat__label">Línea de productos</span>
+                <h1 class="cat__banner-title">Catálogo de Baterías</h1>
+                <p class="cat__banner-desc">Encontrá la batería ideal para tu equipo. Asesoramiento técnico sin cargo.</p>
+            </div>
+        </section>
+
+        <section class="catalogo__section" id="catalogo">
+            <div class="filtros__container" role="group" aria-label="Filtrar por categoría">
+                <button class="filtro__btn active" data-cat="todos">Todos</button>
+                <button class="filtro__btn" data-cat="automotores">Automotores</button>
+                <button class="filtro__btn" data-cat="pesada">Línea Pesada</button>
+                <button class="filtro__btn" data-cat="motocicletas">Motocicletas</button>
+                <button class="filtro__btn" data-cat="nautica">Náutica</button>
+                <button class="filtro__btn" data-cat="traccion">Tracción</button>
+                <button class="filtro__btn" data-cat="solar">Solar</button>
+            </div>
+
+            <div class="catalogo__grid" id="catalogoGrid"></div>
+        </section>
+
+        <!-- Modal de detalle de producto -->
+        <div class="modal__overlay" id="prodModal" aria-hidden="true">
+            <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalNombre">
+                <button class="modal__close" id="modalClose" aria-label="Cerrar">&times;</button>
+                <div class="modal__img" id="modalImg"></div>
+                <div class="modal__body">
+                    <span class="prod__badge" id="modalBadge"></span>
+                    <h3 class="modal__nombre" id="modalNombre"></h3>
+                    <p class="modal__desc" id="modalDesc"></p>
+                    <a class="modal__wsp" id="modalWsp" href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="imagenes/WhatsApp.svg" alt="">
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="contacto">
+        <div class="footer__container">
+            <div class="footer__col">
+                <h3 class="footer__heading">Contacto</h3>
+                <address class="footer__address">
+                    <p>Dirección: [tu dirección], Villa María, Córdoba</p>
+                    <p>Teléfono: <a href="tel:+5493534066268">+54 9 353 406-6268</a></p>
+                    <p>Email: <a href="mailto:matiaseravalle@gmail.com">matiaseravalle@gmail.com</a></p>
+                </address>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__heading">Horarios</h3>
+                <p>Lun – Vie: 8:00 – 19:00</p>
+                <p>Sáb: 8:00 – 13:00</p>
+                <p>Dom: Cerrado</p>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__heading">Navegación</h3>
+                <ul class="footer__nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#catalogo">Productos</a></li>
+                    <li><a href="index.html#about">Nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2025 Enermax · Villa María, Córdoba</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5493534066268?text=Hola!%20Quiero%20consultar%20sobre%20bater%C3%ADas%20en%20Enermax." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <img src="imagenes/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script src="productos.js"></script>
+</body>
+</html>

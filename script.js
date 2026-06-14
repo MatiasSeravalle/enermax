@@ -2,6 +2,7 @@
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 const btnUbi = document.getElementById("btn__ubi")
+const btnBat = document.getElementById("btn__baterias")
 
 navToggle.addEventListener('click', () => {
     const isOpen = navMenu.classList.toggle('active');
@@ -20,3 +21,7 @@ navMenu.querySelectorAll('a').forEach(link => {
 btnUbi.addEventListener('click', () => {
     document.getElementById('map').scrollIntoView({behavior: 'smooth'});
 });
+
+btnBat.addEventListener("click", () => {
+    window.location.href = "productos.html";
+})

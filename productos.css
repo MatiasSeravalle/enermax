@@ -1,0 +1,425 @@
+/* === Banner === */
+.cat__banner {
+    margin-top: 70px;
+    background-color: var(--color-terciario);
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.cat__banner-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Animación de entrada del banner */
+.cat__banner .cat__label {
+    animation: fadeDown 0.6s ease both;
+}
+
+.cat__banner-title {
+    animation: fadeDown 0.6s ease 0.1s both;
+}
+
+.cat__banner-desc {
+    animation: fadeDown 0.6s ease 0.2s both;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cat__banner .cat__label {
+    font-weight: 500;
+    color: var(--color-resalto);
+    font-style: oblique;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.cat__banner-title {
+    color: var(--color-fondo);
+    font-size: 2.5rem;
+    margin: 0 0 16px;
+}
+
+.cat__banner-desc {
+    color: var(--color-claro);
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* === Sección catálogo === */
+.catalogo__section {
+    padding: 50px 20px 70px;
+    background-color: #f5f6f8;
+    min-height: 100vh;
+}
+
+/* === Filtros === */
+.filtros__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.filtro__btn {
+    padding: 8px 22px;
+    border-radius: 30px;
+    border: 1.5px solid var(--color-secundario);
+    background-color: transparent;
+    color: var(--color-principal);
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filtro__btn:hover,
+.filtro__btn.active {
+    background-color: var(--color-resalto);
+    border-color: var(--color-resalto);
+    color: #fff;
+}
+
+.filtro__btn:hover {
+    transform: translateY(-2px);
+}
+
+.filtro__btn:active {
+    transform: translateY(0);
+}
+
+/* === Grid de productos === */
+.catalogo__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* === Tarjeta de producto === */
+.prod__card {
+    background-color: #fff;
+    border: 1px solid var(--color-claro);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    /* Estado inicial para la animación de aparición */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cardIn 0.45s ease forwards;
+}
+
+.prod__card {
+    cursor: pointer;
+}
+
+.prod__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+    border-color: var(--color-resalto);
+}
+
+.prod__card:focus-visible {
+    outline: 2px solid var(--color-resalto);
+    outline-offset: 3px;
+}
+
+@keyframes cardIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Área de imagen del producto */
+.prod__img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background:
+        radial-gradient(circle at 30% 30%, rgba(239, 68, 68, 0.12), transparent 60%),
+        linear-gradient(135deg, #eef1f5 0%, #dde3ea 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.prod__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.prod__card:hover .prod__img img {
+    transform: scale(1.05);
+}
+
+.prod__img-icon {
+    font-size: 3rem;
+    opacity: 0.55;
+    filter: grayscale(0.2);
+    transition: transform 0.4s ease;
+}
+
+.prod__card:hover .prod__img-icon {
+    transform: scale(1.12);
+}
+
+/* Cuerpo de la tarjeta */
+.prod__body {
+    padding: 22px 24px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* El badge entra con un pequeño rebote al pasar el mouse */
+.prod__card:hover .prod__badge {
+    transform: scale(1.06);
+}
+
+.prod__badge {
+    transition: transform 0.25s ease;
+}
+
+.prod__badge {
+    display: inline-block;
+    padding: 3px 12px;
+    background-color: var(--color-resalto);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    align-self: flex-start;
+}
+
+.prod__nombre {
+    color: var(--color-terciario);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.prod__desc {
+    color: var(--color-secundario);
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* === Sin resultados === */
+.catalogo__vacio {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--color-secundario);
+    font-weight: 500;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .cat__banner {
+        padding: 50px 20px;
+    }
+
+    .cat__banner-title {
+        font-size: 1.9rem;
+    }
+
+    .catalogo__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .cat__banner-title {
+        font-size: 1.5rem;
+    }
+
+    .catalogo__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros__container {
+        gap: 8px;
+    }
+
+    .filtro__btn {
+        font-size: 0.8rem;
+        padding: 7px 16px;
+    }
+}
+
+/* === Modal de detalle === */
+.modal__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal__overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    position: relative;
+    background-color: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 460px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px) scale(0.97);
+    transition: transform 0.25s ease;
+}
+
+.modal__overlay.active .modal {
+    transform: translateY(0) scale(1);
+}
+
+.modal__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: var(--color-terciario);
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal__close:hover {
+    background-color: var(--color-resalto);
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+.modal__img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background:
+        radial-gradient(circle at 30% 30%, rgba(239, 68, 68, 0.12), transparent 60%),
+        linear-gradient(135deg, #eef1f5 0%, #dde3ea 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.modal__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal__img .prod__img-icon {
+    font-size: 4rem;
+    opacity: 0.55;
+}
+
+.modal__body {
+    padding: 24px 26px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal__nombre {
+    color: var(--color-terciario);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.modal__desc {
+    color: var(--color-secundario);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.modal__wsp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 6px;
+    padding: 13px 20px;
+    background-color: #25d366;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal__wsp img {
+    width: 22px;
+    height: 22px;
+}
+
+.modal__wsp:hover {
+    background-color: #1ebe57;
+    transform: translateY(-2px);
+}
+
+/* === Accesibilidad: desactivar animaciones si el usuario lo prefiere === */
+@media (prefers-reduced-motion: reduce) {
+    .cat__banner .cat__label,
+    .cat__banner-title,
+    .cat__banner-desc,
+    .prod__card {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .prod__card,
+    .filtro__btn,
+    .prod__badge,
+    .modal,
+    .modal__overlay,
+    .modal__close,
+    .modal__wsp {
+        transition: none;
+    }
+}
