@@ -1,22 +1,67 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Catálogo completo de baterías Enermax: automotores, línea pesada, motos, náutica, tracción y solar. Villa María, Córdoba.">
+    <title>Catálogo de baterías | Enermax Villa María, Córdoba</title>
+    <meta name="description" content="Catálogo de baterías Enermax: automotores, línea pesada, motos, náutica, tracción y solar. Encontrá la batería ideal para tu equipo en Villa María, Córdoba.">
+    <link rel="canonical" href="https://www.enermax.com.ar/productos.html">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Enermax">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Enermax">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:title" content="Catálogo de baterías | Enermax Villa María, Córdoba">
+    <meta property="og:description" content="Baterías para automotores, línea pesada, motos, náutica, tracción y solar. Asesoramiento técnico sin cargo.">
+    <meta property="og:url" content="https://www.enermax.com.ar/productos.html">
+    <meta property="og:image" content="https://www.enermax.com.ar/imagenes/hero.webp">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Catálogo de baterías | Enermax">
+    <meta name="twitter:description" content="Automotores, línea pesada, motos, náutica, tracción y solar.">
+    <meta name="twitter:image" content="https://www.enermax.com.ar/imagenes/hero.webp">
+
+    <link rel="icon" href="imagenes/battery_change_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" type="image/png">
+    <link rel="apple-touch-icon" href="imagenes/battery_change_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png">
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="productos.css">
-    <title>Catálogo – Enermax</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Migas de pan -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.enermax.com.ar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Catálogo de baterías",
+          "item": "https://www.enermax.com.ar/productos.html"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
     <header>
         <nav class="nav__container">
-            <a href="index.html"><img src="imagenes/battery_change_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Logo de Enermax" class="logo"></a>
+            <a href="index.html" aria-label="Enermax - Inicio"><img src="imagenes/battery_change_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Logo de Enermax" class="logo" width="48" height="48"></a>
 
             <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
                 <span class="nav__toggle-bar"></span>
@@ -43,6 +88,7 @@
         </section>
 
         <section class="catalogo__section" id="catalogo">
+            <h2 class="sr-only">Catálogo de baterías por categoría</h2>
             <div class="filtros__container" role="group" aria-label="Filtrar por categoría">
                 <button class="filtro__btn active" data-cat="todos">Todos</button>
                 <button class="filtro__btn" data-cat="automotores">Automotores</button>
@@ -53,7 +99,161 @@
                 <button class="filtro__btn" data-cat="solar">Solar</button>
             </div>
 
-            <div class="catalogo__grid" id="catalogoGrid"></div>
+            <div class="catalogo__grid" id="catalogoGrid">
+                <!-- Productos renderizados en HTML para indexación SEO. El JS los reemplaza para el filtrado interactivo. -->
+                <article class="prod__card" data-cat="automotores">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Automotores</span>
+                        <h3 class="prod__nombre">Batería 12V 45Ah</h3>
+                        <p class="prod__desc">Para vehículos compactos y utilitarios livianos. Arranque confiable en condiciones de baja temperatura.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="automotores">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Automotores</span>
+                        <h3 class="prod__nombre">Batería 12V 65Ah</h3>
+                        <p class="prod__desc">Ideal para sedanes y SUVs medianos. Alta resistencia a ciclos de carga y descarga repetidos.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="automotores">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Automotores</span>
+                        <h3 class="prod__nombre">Batería 12V 75Ah</h3>
+                        <p class="prod__desc">Para vehículos con alto consumo eléctrico. Soporta arranques frecuentes con bajo nivel de carga.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="automotores">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Automotores</span>
+                        <h3 class="prod__nombre">Batería 12V 90Ah</h3>
+                        <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="pesada">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Línea Pesada</span>
+                        <h3 class="prod__nombre">Batería 12V 150Ah</h3>
+                        <p class="prod__desc">Para camiones medianos y micros. Placa reforzada con alta resistencia a vibraciones y golpes.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="pesada">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Línea Pesada</span>
+                        <h3 class="prod__nombre">Batería 12V 180Ah</h3>
+                        <p class="prod__desc">Para maquinaria agrícola y vehículos de gran porte. Rendimiento estable en ciclos de trabajo intenso.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="pesada">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Línea Pesada</span>
+                        <h3 class="prod__nombre">Batería 12V 220Ah</h3>
+                        <p class="prod__desc">Para camiones de larga distancia y equipos de construcción. Máxima capacidad de arranque en frío.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="motocicletas">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Motocicletas</span>
+                        <h3 class="prod__nombre">Batería 12V 5Ah</h3>
+                        <p class="prod__desc">Para motos de baja cilindrada y scooters. Diseño compacto, liviano y libre de mantenimiento.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="motocicletas">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Motocicletas</span>
+                        <h3 class="prod__nombre">Batería 12V 9Ah</h3>
+                        <p class="prod__desc">Para motos medianas y enduro. Tecnología MF sin relleno de agua con larga vida útil.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="motocicletas">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Motocicletas</span>
+                        <h3 class="prod__nombre">Batería 12V 14Ah</h3>
+                        <p class="prod__desc">Para motos de alta cilindrada y custom. Alta corriente de arranque para motores de gran porte.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="nautica">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Náutica</span>
+                        <h3 class="prod__nombre">Batería 12V 100Ah Náutica</h3>
+                        <p class="prod__desc">Para arranque y servicios en embarcaciones. Resistente a la humedad y la corrosión marina.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="nautica">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Náutica</span>
+                        <h3 class="prod__nombre">Batería 12V 120Ah Deep Cycle</h3>
+                        <p class="prod__desc">Para lanchas y veleros con equipos electrónicos a bordo. Soporta descargas profundas reiteradas.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="nautica">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Náutica</span>
+                        <h3 class="prod__nombre">Batería 12V 150Ah Gel Náutica</h3>
+                        <p class="prod__desc">Para uso intensivo en embarcaciones. Sin riesgo de derrame, ideal para instalaciones cerradas.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="traccion">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Tracción</span>
+                        <h3 class="prod__nombre">Batería 6V 200Ah Tracción</h3>
+                        <p class="prod__desc">Para autoelevadores y vehículos eléctricos industriales. Diseñada para ciclos profundos diarios.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="traccion">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Tracción</span>
+                        <h3 class="prod__nombre">Batería 6V 280Ah Tracción</h3>
+                        <p class="prod__desc">Para uso intensivo en depósitos y logística. Alta capacidad de ciclo con mínima degradación.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="traccion">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Tracción</span>
+                        <h3 class="prod__nombre">Batería 12V 150Ah Tracción</h3>
+                        <p class="prod__desc">Para carretillas eléctricas y equipamiento de planta. Resistente a sobrecargas y vibraciones.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="solar">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Solar</span>
+                        <h3 class="prod__nombre">Batería 12V 100Ah Solar</h3>
+                        <p class="prod__desc">Almacenamiento de energía para sistemas fotovoltaicos domésticos. Compatible con paneles de hasta 400W.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="solar">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Solar</span>
+                        <h3 class="prod__nombre">Batería 12V 200Ah AGM Solar</h3>
+                        <p class="prod__desc">Para instalaciones medianas. Sin mantenimiento, mayor durabilidad y resistencia a temperaturas extremas.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="solar">
+                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Solar</span>
+                        <h3 class="prod__nombre">Batería 12V 250Ah Gel Solar</h3>
+                        <p class="prod__desc">Para sistemas solares críticos y fuera de red. Tecnología gel para mayor seguridad y vida útil prolongada.</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <!-- Modal de detalle de producto -->
@@ -79,7 +279,7 @@
             <div class="footer__col">
                 <h3 class="footer__heading">Contacto</h3>
                 <address class="footer__address">
-                    <p>Dirección: [tu dirección], Villa María, Córdoba</p>
+                    <p>Dirección: Constancio Carlos Vigil 1785, X5900 Villa María, Córdoba</p>
                     <p>Teléfono: <a href="tel:+5493534066268">+54 9 353 406-6268</a></p>
                     <p>Email: <a href="mailto:matiaseravalle@gmail.com">matiaseravalle@gmail.com</a></p>
                 </address>
@@ -105,7 +305,7 @@
     </footer>
 
     <a href="https://wa.me/5493534066268?text=Hola!%20Quiero%20consultar%20sobre%20bater%C3%ADas%20en%20Enermax." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-        <img src="imagenes/WhatsApp.svg" alt="WhatsApp">
+        <img src="imagenes/WhatsApp.svg" alt="" width="32" height="32">
     </a>
 
     <script src="productos.js"></script>

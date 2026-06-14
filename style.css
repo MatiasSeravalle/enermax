@@ -13,6 +13,19 @@ html {
     overflow-x: hidden;
 }
 
+/* Oculto visualmente pero accesible para lectores de pantalla y SEO */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 * {
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -123,7 +136,7 @@ header {
     margin-top: 70px;
     background-image:
         linear-gradient(100deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.55) 45%, rgba(15, 23, 42, 0.15) 100%),
-        url("imagenes/Gemini_Generated_Image_a4xaea4xaea4xaea.png");
+        url("imagenes/hero.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
