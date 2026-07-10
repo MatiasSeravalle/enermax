@@ -11,6 +11,10 @@
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* Compensa el header fijo (70px) al saltar a una sección con #ancla,
+       para que el título no quede tapado. */
+    scroll-padding-top: 80px;
 }
 
 /* Oculto visualmente pero accesible para lectores de pantalla y SEO */
@@ -27,7 +31,6 @@ html {
 }
 
 * {
-    scroll-behavior: smooth;
     box-sizing: border-box;
 }
 
@@ -59,7 +62,7 @@ header {
 }
 
 .logo {
-    height: 40px;
+    height: 50px;
     width: auto;
     display: block;
 }
@@ -165,6 +168,10 @@ h1 {
     margin: 0;
     font-size: 3.5em;
     color: var(--color-fondo);
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bolder;
+    margin-bottom: -10px;
 }
 
 .hero__subtitulo {
@@ -176,8 +183,9 @@ h1 {
 
 .hero__p {
     color: var(--color-claro);
-    text-align: justify;
+    text-align: left;
     margin: 0;
+    line-height: 1.6;
 }
 
 .btn__container {
@@ -190,6 +198,13 @@ h1 {
     padding: 12px 30px;
     margin: 0;
     margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
 }
 
 #btn__baterias {
@@ -241,14 +256,17 @@ h1 {
 }
 
 .grid__categorias {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .cat__item {
+    flex: 1 1 280px;
+    max-width: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -311,6 +329,10 @@ h1 {
     box-shadow: 0 0 20px 1px #0009;
 }
 
+.about__content {
+    max-width: 560px; /* mejora la legibilidad: evita líneas demasiado largas */
+}
+
 .about__section h2 {
     font-family: "Space Grotesk", sans-serif;
     color: var(--color-acento);
@@ -319,7 +341,8 @@ h1 {
 .about__section p {
     color: var(--color-terciario);
     font-weight: 500;
-    text-align: justify;
+    text-align: left;
+    line-height: 1.7;
     padding-right: 20px;
 }
 
@@ -563,7 +586,6 @@ h1 {
     }
 
     .grid__categorias {
-        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
 
@@ -610,8 +632,8 @@ h1 {
         font-size: 1.1em;
     }
 
-    .grid__categorias {
-        grid-template-columns: 1fr;
+    .cat__item {
+        flex-basis: 100%;
     }
 
     .cat__title {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de baterías | Enermax Villa María, Córdoba</title>
-    <meta name="description" content="Catálogo de baterías Enermax: automotores, línea pesada, motos, náutica, tracción y solar. Encontrá la batería ideal para tu equipo en Villa María, Córdoba.">
+    <meta name="description" content="Catálogo de baterías Enermax: automotores, línea pesada, náutica, tracción y solar. Encontrá la batería ideal para tu equipo en Villa María, Córdoba.">
     <link rel="canonical" href="https://www.enermax.com.ar/productos.html">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Enermax">
@@ -15,18 +15,18 @@
     <meta property="og:site_name" content="Enermax">
     <meta property="og:locale" content="es_AR">
     <meta property="og:title" content="Catálogo de baterías | Enermax Villa María, Córdoba">
-    <meta property="og:description" content="Baterías para automotores, línea pesada, motos, náutica, tracción y solar. Asesoramiento técnico sin cargo.">
+    <meta property="og:description" content="Baterías para automotores, línea pesada, náutica, tracción y solar. Asesoramiento técnico sin cargo.">
     <meta property="og:url" content="https://www.enermax.com.ar/productos.html">
     <meta property="og:image" content="https://www.enermax.com.ar/imagenes/hero.webp">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Catálogo de baterías | Enermax">
-    <meta name="twitter:description" content="Automotores, línea pesada, motos, náutica, tracción y solar.">
+    <meta name="twitter:description" content="Automotores, línea pesada, náutica, tracción y solar.">
     <meta name="twitter:image" content="https://www.enermax.com.ar/imagenes/hero.webp">
 
-    <link rel="icon" href="imagenes/battery_change_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" type="image/png">
-    <link rel="apple-touch-icon" href="imagenes/battery_change_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png">
+    <link rel="icon" href="imagenes/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="imagenes/logo.png">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="productos.css">
@@ -61,7 +61,7 @@
 
     <header>
         <nav class="nav__container">
-            <a href="index.html" aria-label="Enermax - Inicio"><img src="imagenes/battery_change_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Logo de Enermax" class="logo" width="48" height="48"></a>
+            <a href="index.html" aria-label="Enermax - Inicio"><img src="imagenes/logo.png" alt="Logo de Enermax" class="logo" width="48" height="48"></a>
 
             <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
                 <span class="nav__toggle-bar"></span>
@@ -93,116 +93,157 @@
                 <button class="filtro__btn active" data-cat="todos">Todos</button>
                 <button class="filtro__btn" data-cat="automotores">Automotores</button>
                 <button class="filtro__btn" data-cat="pesada">Línea Pesada</button>
-                <button class="filtro__btn" data-cat="motocicletas">Motocicletas</button>
                 <button class="filtro__btn" data-cat="nautica">Náutica</button>
                 <button class="filtro__btn" data-cat="traccion">Tracción</button>
                 <button class="filtro__btn" data-cat="solar">Solar</button>
             </div>
 
+            <div class="filtros__container filtros__container--marcas" id="marcasContainer" role="group" aria-label="Filtrar por marca" hidden></div>
+
             <div class="catalogo__grid" id="catalogoGrid">
                 <!-- Productos renderizados en HTML para indexación SEO. El JS los reemplaza para el filtrado interactivo. -->
                 <article class="prod__card" data-cat="automotores">
-                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__img"><img src="baterias-sin-fondo/enermax%20e36%20diago.webp" alt="Batería Enermax E36" loading="lazy"></div>
                     <div class="prod__body">
                         <span class="prod__badge">Automotores</span>
-                        <h3 class="prod__nombre">Batería 12V 45Ah</h3>
+                        <h3 class="prod__nombre">Batería Enermax E36</h3>
                         <p class="prod__desc">Para vehículos compactos y utilitarios livianos. Arranque confiable en condiciones de baja temperatura.</p>
                     </div>
                 </article>
                 <article class="prod__card" data-cat="automotores">
-                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__img"><img src="baterias-sin-fondo/enermax%20e50%20diago.webp" alt="Batería Enermax E50" loading="lazy"></div>
                     <div class="prod__body">
                         <span class="prod__badge">Automotores</span>
-                        <h3 class="prod__nombre">Batería 12V 65Ah</h3>
-                        <p class="prod__desc">Ideal para sedanes y SUVs medianos. Alta resistencia a ciclos de carga y descarga repetidos.</p>
-                    </div>
-                </article>
-                <article class="prod__card" data-cat="automotores">
-                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
-                    <div class="prod__body">
-                        <span class="prod__badge">Automotores</span>
-                        <h3 class="prod__nombre">Batería 12V 75Ah</h3>
+                        <h3 class="prod__nombre">Batería Enermax E50</h3>
                         <p class="prod__desc">Para vehículos con alto consumo eléctrico. Soporta arranques frecuentes con bajo nivel de carga.</p>
                     </div>
                 </article>
                 <article class="prod__card" data-cat="automotores">
-                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__img"><img src="baterias-sin-fondo/enermax%2052%20diago.webp" alt="Batería Enermax E52" loading="lazy"></div>
                     <div class="prod__body">
                         <span class="prod__badge">Automotores</span>
-                        <h3 class="prod__nombre">Batería 12V 90Ah</h3>
+                        <h3 class="prod__nombre">Batería Enermax E52</h3>
+                        <p class="prod__desc">Ideal para sedanes y SUVs medianos. Alta resistencia a ciclos de carga y descarga repetidos.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="automotores">
+                    <div class="prod__img"><img src="baterias-sin-fondo/enermax%20e55%20diago.webp" alt="Batería Enermax E55" loading="lazy"></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Automotores</span>
+                        <h3 class="prod__nombre">Batería Enermax E55</h3>
+                        <p class="prod__desc">Para vehículos con alto consumo eléctrico. Soporta arranques frecuentes con bajo nivel de carga.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="automotores">
+                    <div class="prod__img"><img src="baterias-sin-fondo/enermax%2065%20diago.webp" alt="Batería Enermax E65" loading="lazy"></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Automotores</span>
+                        <h3 class="prod__nombre">Batería Enermax E65</h3>
+                        <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="automotores">
+                    <div class="prod__img"><img src="baterias-sin-fondo/enermax%2070%20diago.webp" alt="Batería Enermax E70" loading="lazy"></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Automotores</span>
+                        <h3 class="prod__nombre">Batería Enermax E70</h3>
+                        <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="automotores">
+                    <div class="prod__img"><img src="baterias-sin-fondo/placord%2065%20diago.webp" alt="Batería Placord P65" loading="lazy"></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Automotores</span>
+                        <h3 class="prod__nombre">Batería Placord P65</h3>
+                        <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="automotores">
+                    <div class="prod__img"><img src="baterias-sin-fondo/placord%2075%20diago.webp" alt="Batería Placord P75" loading="lazy"></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Automotores</span>
+                        <h3 class="prod__nombre">Batería Placord P75</h3>
+                        <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="automotores">
+                    <div class="prod__img"><img src="baterias-sin-fondo/gh%2060%20diago.webp" alt="Batería GH 60" loading="lazy"></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Automotores</span>
+                        <h3 class="prod__nombre">Batería GH 60</h3>
+                        <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
+                    </div>
+                </article>
+                <article class="prod__card" data-cat="automotores">
+                    <div class="prod__img"><img src="baterias-sin-fondo/gh%2075%20diago.webp" alt="Batería GH 75" loading="lazy"></div>
+                    <div class="prod__body">
+                        <span class="prod__badge">Automotores</span>
+                        <h3 class="prod__nombre">Batería GH 75</h3>
                         <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
                     </div>
                 </article>
                 <article class="prod__card" data-cat="pesada">
-                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__img"><img src="baterias-sin-fondo/enermax%2090%20diago.webp" alt="Batería Enermax E90" loading="lazy"></div>
                     <div class="prod__body">
                         <span class="prod__badge">Línea Pesada</span>
-                        <h3 class="prod__nombre">Batería 12V 150Ah</h3>
-                        <p class="prod__desc">Para camiones medianos y micros. Placa reforzada con alta resistencia a vibraciones y golpes.</p>
+                        <h3 class="prod__nombre">Batería Enermax E90</h3>
+                        <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
                     </div>
                 </article>
                 <article class="prod__card" data-cat="pesada">
-                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__img"><img src="baterias-sin-fondo/enermax%20110%20diago.webp" alt="Batería Enermax E110" loading="lazy"></div>
                     <div class="prod__body">
                         <span class="prod__badge">Línea Pesada</span>
-                        <h3 class="prod__nombre">Batería 12V 180Ah</h3>
-                        <p class="prod__desc">Para maquinaria agrícola y vehículos de gran porte. Rendimiento estable en ciclos de trabajo intenso.</p>
+                        <h3 class="prod__nombre">Batería Enermax E110</h3>
+                        <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
                     </div>
                 </article>
                 <article class="prod__card" data-cat="pesada">
-                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__img"><img src="baterias-sin-fondo/enermax%20160%20diago.webp" alt="Batería Enermax E160" loading="lazy"></div>
                     <div class="prod__body">
                         <span class="prod__badge">Línea Pesada</span>
-                        <h3 class="prod__nombre">Batería 12V 220Ah</h3>
-                        <p class="prod__desc">Para camiones de larga distancia y equipos de construcción. Máxima capacidad de arranque en frío.</p>
+                        <h3 class="prod__nombre">Batería Enermax E160</h3>
+                        <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
                     </div>
                 </article>
-                <article class="prod__card" data-cat="motocicletas">
-                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                <article class="prod__card" data-cat="pesada">
+                    <div class="prod__img"><img src="baterias-sin-fondo/placord%2090%20diago.webp" alt="Batería Placord P90" loading="lazy"></div>
                     <div class="prod__body">
-                        <span class="prod__badge">Motocicletas</span>
-                        <h3 class="prod__nombre">Batería 12V 5Ah</h3>
-                        <p class="prod__desc">Para motos de baja cilindrada y scooters. Diseño compacto, liviano y libre de mantenimiento.</p>
+                        <span class="prod__badge">Línea Pesada</span>
+                        <h3 class="prod__nombre">Batería Placord P90</h3>
+                        <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
                     </div>
                 </article>
-                <article class="prod__card" data-cat="motocicletas">
-                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                <article class="prod__card" data-cat="pesada">
+                    <div class="prod__img"><img src="baterias-sin-fondo/placord%20110%20diago.webp" alt="Batería Placord P110" loading="lazy"></div>
                     <div class="prod__body">
-                        <span class="prod__badge">Motocicletas</span>
-                        <h3 class="prod__nombre">Batería 12V 9Ah</h3>
-                        <p class="prod__desc">Para motos medianas y enduro. Tecnología MF sin relleno de agua con larga vida útil.</p>
+                        <span class="prod__badge">Línea Pesada</span>
+                        <h3 class="prod__nombre">Batería Placord P110</h3>
+                        <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
                     </div>
                 </article>
-                <article class="prod__card" data-cat="motocicletas">
-                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                <article class="prod__card" data-cat="pesada">
+                    <div class="prod__img"><img src="baterias-sin-fondo/placord%20180%20diago.webp" alt="Batería Placord P180" loading="lazy"></div>
                     <div class="prod__body">
-                        <span class="prod__badge">Motocicletas</span>
-                        <h3 class="prod__nombre">Batería 12V 14Ah</h3>
-                        <p class="prod__desc">Para motos de alta cilindrada y custom. Alta corriente de arranque para motores de gran porte.</p>
-                    </div>
-                </article>
-                <article class="prod__card" data-cat="nautica">
-                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
-                    <div class="prod__body">
-                        <span class="prod__badge">Náutica</span>
-                        <h3 class="prod__nombre">Batería 12V 100Ah Náutica</h3>
-                        <p class="prod__desc">Para arranque y servicios en embarcaciones. Resistente a la humedad y la corrosión marina.</p>
+                        <span class="prod__badge">Línea Pesada</span>
+                        <h3 class="prod__nombre">Batería Placord P180</h3>
+                        <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
                     </div>
                 </article>
                 <article class="prod__card" data-cat="nautica">
-                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__img"><img src="baterias-sin-fondo/nautica%2065%20diago.webp" alt="Batería Enermax Nautica 65" loading="lazy"></div>
                     <div class="prod__body">
                         <span class="prod__badge">Náutica</span>
-                        <h3 class="prod__nombre">Batería 12V 120Ah Deep Cycle</h3>
-                        <p class="prod__desc">Para lanchas y veleros con equipos electrónicos a bordo. Soporta descargas profundas reiteradas.</p>
+                        <h3 class="prod__nombre">Batería Enermax Nautica 65</h3>
+                        <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
                     </div>
                 </article>
                 <article class="prod__card" data-cat="nautica">
-                    <div class="prod__img"><span class="prod__img-icon">🔋</span></div>
+                    <div class="prod__img"><img src="baterias-sin-fondo/agua%20diago.webp" alt="Batería Moto de Agua" loading="lazy"></div>
                     <div class="prod__body">
                         <span class="prod__badge">Náutica</span>
-                        <h3 class="prod__nombre">Batería 12V 150Ah Gel Náutica</h3>
-                        <p class="prod__desc">Para uso intensivo en embarcaciones. Sin riesgo de derrame, ideal para instalaciones cerradas.</p>
+                        <h3 class="prod__nombre">Batería Moto de Agua</h3>
+                        <p class="prod__desc">Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.</p>
                     </div>
                 </article>
                 <article class="prod__card" data-cat="traccion">

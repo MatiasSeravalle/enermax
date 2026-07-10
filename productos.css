@@ -100,6 +100,30 @@
     transform: translateY(0);
 }
 
+/* Fila secundaria: filtro por marca. Se muestra bajo la de tipos y solo
+   aparece cuando la categoría tiene 2+ marcas (lo maneja el JS). */
+.filtros__container--marcas {
+    margin-top: -24px; /* acerca la fila de marcas a la de tipos */
+}
+
+.filtros__container--marcas[hidden] {
+    display: none;
+}
+
+.filtro__btn--marca {
+    padding: 6px 18px;
+    font-size: 0.78rem;
+    border-color: var(--color-claro);
+    color: var(--color-secundario);
+}
+
+.filtro__btn--marca:hover,
+.filtro__btn--marca.active {
+    background-color: var(--color-terciario);
+    border-color: var(--color-terciario);
+    color: #fff;
+}
+
 /* === Grid de productos === */
 .catalogo__grid {
     display: grid;
@@ -164,12 +188,117 @@
 .prod__img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    padding: 12px;
     transition: transform 0.4s ease;
 }
 
-.prod__card:hover .prod__img img {
+/* Solo la imagen única (hija directa) hace zoom al hover;
+   las del carrusel se controlan aparte. */
+.prod__card:hover .prod__img > img {
     transform: scale(1.05);
+}
+
+/* === Carrusel de imágenes por producto === */
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carrusel__track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.carrusel__slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrusel__slide img {
+    padding: 12px;
+}
+
+.carrusel__flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--color-terciario);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    opacity: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+    transition: opacity 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.prod__img:hover .carrusel__flecha,
+.modal__img .carrusel__flecha {
+    opacity: 1;
+}
+
+.carrusel__flecha:hover {
+    background-color: var(--color-resalto);
+    color: #fff;
+}
+
+.carrusel__flecha--prev {
+    left: 8px;
+}
+
+.carrusel__flecha--next {
+    right: 8px;
+}
+
+.carrusel__puntos {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    z-index: 2;
+}
+
+.carrusel__punto {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(15, 23, 42, 0.3);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carrusel__punto.active {
+    background-color: var(--color-resalto);
+    transform: scale(1.35);
+}
+
+/* En pantallas táctiles las flechas se muestran siempre */
+@media (hover: none) {
+    .carrusel__flecha {
+        opacity: 1;
+    }
 }
 
 .prod__img-icon {
@@ -311,19 +440,39 @@
     position: absolute;
     top: 12px;
     right: 12px;
+    z-index: 3;
     width: 36px;
     height: 36px;
     border: none;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.85);
     color: var(--color-terciario);
-    font-size: 1.6rem;
-    line-height: 1;
+    /* La X se dibuja con las barras de abajo, no con el glifo &times;,
+       para que quede perfectamente centrada al rotar en el hover. */
+    font-size: 0;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+/* Dos barras cruzadas, centradas de forma exacta */
+.modal__close::before,
+.modal__close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: currentColor;
+}
+
+.modal__close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal__close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .modal__close:hover {
@@ -347,7 +496,8 @@
 .modal__img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    padding: 14px;
 }
 
 .modal__img .prod__img-icon {
@@ -419,7 +569,10 @@
     .modal,
     .modal__overlay,
     .modal__close,
-    .modal__wsp {
+    .modal__wsp,
+    .carrusel__track,
+    .carrusel__flecha,
+    .carrusel__punto {
         transition: none;
     }
 }
