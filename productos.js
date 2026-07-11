@@ -26,8 +26,7 @@ const productos = [
     {
         nombre: "Batería Enermax E36    ",
         categoria: "automotores",
-        descripcion: "Para vehículos compactos y utilitarios livianos. Arranque confiable en condiciones de baja temperatura.",
-        // Ejemplo real usando tus imágenes ya recortadas. Reemplazá/agregá las que quieras:
+        descripcion: "Para vehículos pequeños asiaticos nafta.",
         imagenes: [
             "baterias-sin-fondo/enermax e36 diago.webp",
             "baterias-sin-fondo/enermax e36 frente.webp",
@@ -37,7 +36,7 @@ const productos = [
     {
         nombre: "Batería Enermax E50",
         categoria: "automotores",
-        descripcion: "Para vehículos con alto consumo eléctrico. Soporta arranques frecuentes con bajo nivel de carga.",
+        descripcion: "Para vehículos compactos nafta. Medidas: 205 largo x 175 ancho x 180 alto.",
         imagenes: [
             "baterias-sin-fondo/enermax e50 diago.webp",    
             "baterias-sin-fondo/enermax e50 arr fre.webp",
@@ -48,7 +47,7 @@ const productos = [
     {
         nombre: "Batería Enermax E52",
         categoria: "automotores",
-        descripcion: "Ideal para sedanes y SUVs medianos. Alta resistencia a ciclos de carga y descarga repetidos.",
+        descripcion: "Para vehiculos medianos asiaticos nafta. Medidas: 235 largo x 125 ancho x 224 alto.",
         imagenes: [
             "baterias-sin-fondo/enermax 52 diago.webp",
             "baterias-sin-fondo/enermax 52 arr fre.webp",
@@ -59,18 +58,18 @@ const productos = [
     {
         nombre: "Batería Enermax E55",
         categoria: "automotores",
-        descripcion: "Para vehículos con alto consumo eléctrico. Soporta arranques frecuentes con bajo nivel de carga.",
+        descripcion: "Para vehiculos medianos nafta. Medidas: 205 largo x 175 ancho x 190 alto.",
         imagenes: [
             "baterias-sin-fondo/enermax e55 diago.webp",
             "baterias-sin-fondo/enermax e55 fre arr.webp    ",
-            "baterias-sin-fondo/enermax e50 fre.webp",
+            "baterias-sin-fondo/enermax e55 fre.webp",
             "baterias-sin-fondo/enermax e55 arriba.webp     ",
         ]
     },
     {
         nombre: "Batería Enermax E65",
         categoria: "automotores",
-        descripcion: "Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.",
+        descripcion: "Para vehiculos medianos nafta. Medidas: 240 largo x 175 ancho x 180 alto.",
         imagenes: [
             "baterias-sin-fondo/enermax 65 diago.webp",
             "baterias-sin-fondo/enermax 65 arr fre.webp",
@@ -81,7 +80,7 @@ const productos = [
     {
         nombre: "Batería Enermax E70",
         categoria: "automotores",
-        descripcion: "Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.",
+        descripcion: "Para vehiculos medianos nafta y diesel. Medidas: 240 largo x 175 ancho x 180 alto.",
         imagenes: [
             "baterias-sin-fondo/enermax 70 diago.webp",
             "baterias-sin-fondo/enermax 70 arr fre.webp",
@@ -92,7 +91,7 @@ const productos = [
     {
         nombre: "Batería Placord P65",
         categoria: "automotores",
-        descripcion: "Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.",
+        descripcion: "Para vehiculos medianos nafta. Medidas: 240 largo x 175 ancho x 180 alto.",
         imagenes: [
             "baterias-sin-fondo/placord 65 diago.webp",
             "baterias-sin-fondo/placord 65 fre arr.webp",
@@ -103,7 +102,7 @@ const productos = [
     {
         nombre: "Batería Placord P75",
         categoria: "automotores",
-        descripcion: "Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.",
+        descripcion: "Para vehiculos medianos diesel. Medidas: 275 largo x 175 ancho x 175 alto.",
         imagenes: [
             "baterias-sin-fondo/placord 75 diago.webp",
             "baterias-sin-fondo/placord 75 arr fre.webp",
@@ -114,7 +113,7 @@ const productos = [
     {
         nombre: "Batería GH 60",
         categoria: "automotores",
-        descripcion: "Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.",
+        descripcion: "Bateria economica para vehiculos medianos nafta. Medidas: 240 largo x 175 ancho x 180 alto.",
         imagenes: [
             "baterias-sin-fondo/gh 60 diago.webp",
             "baterias-sin-fondo/gh 60 arr fre.webp",
@@ -125,7 +124,7 @@ const productos = [
     {
         nombre: "Batería GH 75",
         categoria: "automotores",
-        descripcion: "Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.",
+        descripcion: "Bateria economica para vehiculos medianos nafta y diesel. Medidas: 270 largo x x 175 ancho x 175 alto.",
         imagenes: [
             "baterias-sin-fondo/gh 75 diago.webp",
             "baterias-sin-fondo/gh 75 fre arr.webp",
@@ -137,7 +136,7 @@ const productos = [
     {
         nombre: "Batería Enermax E90",
         categoria: "pesada",
-        descripcion: "Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.",
+        descripcion: "Para camionetas, autoelevadores. Medidas: 300 largo x 175 ancho x 190 alto.",
         imagenes: [
             "baterias-sin-fondo/enermax 90 diago.webp",
             "baterias-sin-fondo/enermax 90 arr fre.webp",
@@ -148,7 +147,7 @@ const productos = [
    {
         nombre: "Batería Enermax E110",
         categoria: "pesada",
-        descripcion: "Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.",
+        descripcion: "Para utilitarios, pickups. Medidas: 350 largo x 175 ancho x 190 alto.",
         imagenes: [
             "baterias-sin-fondo/enermax 110 diago.webp",
             "baterias-sin-fondo/enermax 110 arr fre.webp",
@@ -159,7 +158,7 @@ const productos = [
     {
         nombre: "Batería Enermax E160",
         categoria: "pesada",
-        descripcion: "Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.",
+        descripcion: "Para camiones, tractores.",
         imagenes: [
             "baterias-sin-fondo/enermax 160 diago.webp",
             "baterias-sin-fondo/enermax 160 arr fre.webp",
@@ -170,7 +169,7 @@ const productos = [
     {
         nombre: "Batería Placord P90",
         categoria: "pesada",
-        descripcion: "Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.",
+        descripcion: "Para camionetas, autoelevadores.",
         imagenes: [
             "baterias-sin-fondo/placord 90 diago.webp",
             "baterias-sin-fondo/placord 90 arr fre.webp",
@@ -179,9 +178,9 @@ const productos = [
         ],
     },
     {
-        nombre: "Batería Placord P110",
+        nombre: "Batería Placord P110 AI",
         categoria: "pesada",
-        descripcion: "Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.",
+        descripcion: "Para camiones medianos, tractores. Medidas: 330 largo x 175 ancho x 230 alto.",
         imagenes: [
             "baterias-sin-fondo/placord 110 diago.webp",
             "baterias-sin-fondo/placord 110 arr fre.webp",
@@ -190,9 +189,20 @@ const productos = [
         ],
     },
     {
-        nombre: "Batería Placord P180",
+        nombre: "Batería Placord P110 BD",
         categoria: "pesada",
-        descripcion: "Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.",
+        descripcion: "Para utilitarios, pickups. Medidas: 350 largo x 175 ancho x 190 alto.",
+        imagenes: [
+            "baterias-sin-fondo/placord 110 diago 2.webp    ",
+            "baterias-sin-fondo/placord 110 arr fre 2.webp",
+            "baterias-sin-fondo/placord 110 frente 2.webp",
+            "baterias-sin-fondo/placord 110 arriba 2.webp",
+        ],
+    },
+    {
+        nombre: "Batería Placord P180 AD",
+        categoria: "pesada",
+        descripcion: "Para camiones, maquinas agricolas. Medidas: 507 largo x 213 ancho x 248 alto.",
         imagenes: [
             "baterias-sin-fondo/placord 180 diago.webp",
             "baterias-sin-fondo/placord 180 arr fre.webp",
@@ -200,11 +210,33 @@ const productos = [
             "baterias-sin-fondo/placord 180 arr.webp",
         ],
     },
+    {
+        nombre: "Batería Placord P180 BI",
+        categoria: "pesada",
+        descripcion: "Para camiones Scania, Volvo, Renault. Medidas: 507 largo x 213 ancho x 220 alto.",
+        imagenes: [
+            "baterias-sin-fondo/placord 180 diago 2.webp",
+            "baterias-sin-fondo/placord 180 arr fre 2.webp",
+            "baterias-sin-fondo/placord 180 fre 2.webp",
+            "baterias-sin-fondo/placord 180 arr 2.webp",
+        ],
+    },  
+    {
+        nombre: "Batería Enermax E24",
+        categoria: "pesada",
+        descripcion: "Para mini tractores. Medidas: 19 largo x 13 ancho x 18 alto.",
+        imagenes: [
+            "baterias-sin-fondo/enermax jardin diago.webp",
+            "baterias-sin-fondo/enermax jardin arr fre.webp",
+            "baterias-sin-fondo/enermax jardin fre.webp",
+            "baterias-sin-fondo/enermax jardin arr.webp",
+        ],
+    }, 
     // Náutica
     {
-        nombre: "Batería Enermax Nautica 65",
+        nombre: "Batería Enermax Náutica 65",
         categoria: "nautica",
-        descripcion: "Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.",
+        descripcion: "Para lanchas y embarcaciones deportivas. Medidas: 240 largo x 175 ancho x 180 alto.",
         imagenes: [
             "baterias-sin-fondo/nautica 65 diago.webp",
             "baterias-sin-fondo/nautica 65 arr fre.webp",
@@ -215,7 +247,7 @@ const productos = [
     {
         nombre: "Batería Moto de Agua",
         categoria: "nautica",
-        descripcion: "Para camionetas y 4x4 con muchos accesorios. Máxima corriente de arranque y larga vida útil.",
+        descripcion: "Diseñada para motos de agua. Medidas: 17 largo x 10 ancho x 175 alto.",
         imagenes: [
             "baterias-sin-fondo/agua diago.webp",
             "baterias-sin-fondo/agua arr fre.webp",
@@ -224,35 +256,20 @@ const productos = [
     },
     // Tracción
     {
-        nombre: "Batería 6V 200Ah Tracción",
+        nombre: "Batería Tracción",
         categoria: "traccion",
-        descripcion: "Para autoelevadores y vehículos eléctricos industriales. Diseñada para ciclos profundos diarios."
+        descripcion: "Para autoelevadores y apiladores electricos.",
+        imagenes: [
+            "baterias-sin-fondo/traccion.webp"
+        ]
     },
     {
-        nombre: "Batería 6V 280Ah Tracción",
-        categoria: "traccion",
-        descripcion: "Para uso intensivo en depósitos y logística. Alta capacidad de ciclo con mínima degradación."
-    },
-    {
-        nombre: "Batería 12V 150Ah Tracción",
-        categoria: "traccion",
-        descripcion: "Para carretillas eléctricas y equipamiento de planta. Resistente a sobrecargas y vibraciones."
-    },
-    // Solar
-    {
-        nombre: "Batería 12V 100Ah Solar",
+        nombre: "Batería Solar",
         categoria: "solar",
-        descripcion: "Almacenamiento de energía para sistemas fotovoltaicos domésticos. Compatible con paneles de hasta 400W."
-    },
-    {
-        nombre: "Batería 12V 200Ah AGM Solar",
-        categoria: "solar",
-        descripcion: "Para instalaciones medianas. Sin mantenimiento, mayor durabilidad y resistencia a temperaturas extremas."
-    },
-    {
-        nombre: "Batería 12V 250Ah Gel Solar",
-        categoria: "solar",
-        descripcion: "Para sistemas solares críticos y fuera de red. Tecnología gel para mayor seguridad y vida útil prolongada."
+        descripcion: "Para equipos solares, energia alternativa.",
+        imagenes: [
+            "baterias-sin-fondo/baterias solar.webp"
+        ]
     },
 ];
 
